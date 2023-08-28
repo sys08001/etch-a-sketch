@@ -1,0 +1,11 @@
+.grid-row {
+    display: flex;
+}
+
+
+.grid-item {
+    width: 200px;
+    height: 200px;
+    background: red;
+    border: 1px solid black;
+}
