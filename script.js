@@ -27,9 +27,12 @@ function drawGrid(size = 16) {
         for (let j = 0; j < size; j++) {
             let gridItem = document.createElement('div');
             gridItem.classList.add('grid-item');
-            // Changes the color of a square on mouse hover
-            gridItem.addEventListener('mouseover', (e) => {
-                e.target.classList.add('grid-item-hover');
+            // Changes the color of a square on mouse hover to random value
+            gridItem.addEventListener('mouseover', () => {
+                let r = Math.floor(Math.random() * 256);
+                let g = Math.floor(Math.random() * 256);
+                let b = Math.floor(Math.random() * 256);
+                gridItem.style.backgroundColor = `rgb(${r},${g},${b})`;
             });
             gridRow.appendChild(gridItem);
         }
